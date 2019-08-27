@@ -26,19 +26,5 @@ promise.then(function(dataSource) {
     viewer.dataSources.add(dataSource);
 	var entities = dataSource.entities.values;
 	viewer.zoomTo(entities)
-    for (var i = 0; i < entities.length; i++) {
-        var entity = entities[i];
-        if (entity.properties.hasProperty('prop0')) {
-            var prop0 = entity.properties.prop0;
-            var prop0Value = prop0.valueOf();
-            if  (prop0Value.type ==='ellipse') {
-                entity.ellipse = new Cesium.EllipseGraphics({
-                    semiMinorAxis: prop0Value.semiMinorAxis,
-                    semiMajorAxis: prop0Value.semiMajorAxis,
-		    		height: prop0Value.height,
-                    material: Cesium.Color.fromCssColorString(prop0Value.color)
-                });
-            }
-        }
-    }
 });
+
