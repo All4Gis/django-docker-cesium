@@ -7,7 +7,6 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
     imageryProviderViewModels: imageryProviders,
     selectedImageryProviderViewModel: imageryProviders[selectedImageryProviderIndex],
 	homeButton : false,
-	timeline : false,
 	infoBox : false,
 	sceneModePicker : false,
 	selectionIndicator : false,
